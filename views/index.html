@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+
+  <h2 class="text-center mb-4" style="color: #BB86FC;">Galeria</h2>
+
+  <!-- Formulário de Upload -->
+  <div class="upload-card mb-5 shadow">
+    <form action="{#{ url_for('home') }#}" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="file" class="form-label">Escolha uma imagem para enviar:</label>
+        <input class="form-control" name="file" type="file" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn upload-btn">Enviar Imagem</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Galeria de Imagens -->
+  <div class="row g-4 justify-content-center">
+
+    <!-- Imagens padrão -->
+    {% for img in ['arte_1.jpg', 'arte_4.jpg', 'arte_3.webp'] %}
+      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+        <div class="card gallery-card p-2">
+          <div class="gallery-img-wrapper">
+            <img src="/static/uploads/{{ img }}" alt="Imagem padrão" class="img-fluid gallery-img">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    <!-- Imagens enviadas -->
+    {% for img in imagens %}
+      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+        <div class="card gallery-card p-2">
+          <div class="gallery-img-wrapper">
+            <img src="{{ url_for('static', filename='uploads/' ~ img.filename) }}" alt="Imagem enviada" class="img-fluid gallery-img">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock content %}

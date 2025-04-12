@@ -1,0 +1,135 @@
+body {
+    background-color: #121212 !important;
+    color: #E0E0E0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #BB86FC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #03DAC6;
+}
+
+header {
+    background-color: #1F1B24;
+    padding: 1rem 2rem;
+    color: #E0E0E0;
+}
+
+nav {
+    background-color: #1F1B24 !important;
+}
+
+nav a {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #E0E0E0 !important;
+}
+
+nav a:hover {
+    color: #03DAC6 !important;
+}
+
+button, .btn {
+    background-color: #fff;
+    color: #E0E0E0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #03DAC6;
+    color: #121212;
+}
+
+.custom-navbar {
+    background-color: #1F1B24;
+}
+
+.upload-card {
+    background-color: #1F1B24;
+    border: 1px solid #BB86FC;
+    border-radius: 10px;
+    padding: 20px;
+    color: #E0E0E0;
+}
+
+/* Botão de Upload */
+.upload-btn {
+    background-color: #BB86FC !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #03DAC6 !important;
+    color: #121212 !important;
+}
+
+/* Card da galeria com tamanho fixo */
+.card.gallery-card {
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+    background-color: #1F1B24;
+    border: 2px solid #BB86FC;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.gallery-img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.5);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .upload-card {
+        padding: 15px;
+    }
+
+    .upload-btn {
+        font-size: 0.9rem;
+    }
+
+    .gallery-card {
+        height: 200px;
+    }
+}
